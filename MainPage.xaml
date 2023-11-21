@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="MediaElementPosition.MainPage" x:Name="pageContent"
+             Shell.NavBarIsVisible="False"
+             Shell.BackgroundColor="#264c25"
+                          Title=""
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui">
+    <ContentPage.Behaviors>
+        <mct:StatusBarBehavior StatusBarColor="#264c25" />
+    </ContentPage.Behaviors>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Grid x:Name="gridPlayer1" Margin="0,0,0,0" Grid.Row="0">
+                <toolkit:MediaElement x:Name="mediaElement1" 
+                    Aspect="AspectFill"
+                    ShouldAutoPlay="True" 
+                    PropertyChanged="mediaElement_PropertyChanged"
+                    PositionChanged="mediaElement_PositionChanged"
+                    >
+                </toolkit:MediaElement>
+            </Grid>
+            <Label x:Name="lblInfo1" Grid.Row="0" HorizontalOptions="End" VerticalOptions="End" Margin="0,0,15,77" TextColor="Black" />
+            <Grid x:Name="gridPlayer2" Margin="0,0,0,0" Grid.Row="0">
+                <toolkit:MediaElement x:Name="mediaElement2" 
+                    Aspect="AspectFill"
+                    ShouldAutoPlay="True" 
+                    PropertyChanged="mediaElement_PropertyChanged"
+                    PositionChanged="mediaElement_PositionChanged"
+                    >
+                </toolkit:MediaElement>
+            </Grid>
+            <Label x:Name="lblInfo2" Grid.Row="0" HorizontalOptions="End" VerticalOptions="End" Margin="0,0,15,77" TextColor="Black" />
+            <Button
+                x:Name="btnLoadVideo"
+                Text="Reload Video"
+                HorizontalOptions="CenterAndExpand"
+                SemanticProperties.Hint="Reload"
+                Clicked="btnLoadVideo_Clicked"/>
+            <Button
+                x:Name="btnPlayPause"
+                Text="Play"
+                HorizontalOptions="CenterAndExpand"
+                SemanticProperties.Hint="Play/Pause"
+                Clicked="btnPlayPause_Clicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
