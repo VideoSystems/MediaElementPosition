@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
@@ -16,7 +16,7 @@
             Padding="30,0"
             Spacing="25">
             <Grid x:Name="gridPlayer1" Margin="0,0,0,0" Grid.Row="0">
-                <toolkit:MediaElement x:Name="mediaElement1" 
+                <toolkit:MediaElement x:Name="mediaElement1" HeightRequest="200"
                     Aspect="AspectFill"
                     ShouldAutoPlay="True" 
                     PropertyChanged="mediaElement_PropertyChanged"
@@ -24,9 +24,9 @@
                     >
                 </toolkit:MediaElement>
             </Grid>
-            <Label x:Name="lblInfo1" Grid.Row="0" HorizontalOptions="End" VerticalOptions="End" Margin="0,0,15,77" TextColor="Black" />
+            <Label x:Name="lblInfo1" Grid.Row="0" HorizontalOptions="End" VerticalOptions="End" Margin="0,0,15,25" TextColor="Black" />
             <Grid x:Name="gridPlayer2" Margin="0,0,0,0" Grid.Row="0">
-                <toolkit:MediaElement x:Name="mediaElement2" 
+                <toolkit:MediaElement x:Name="mediaElement2"  HeightRequest="200"
                     Aspect="AspectFill"
                     ShouldAutoPlay="True" 
                     PropertyChanged="mediaElement_PropertyChanged"
@@ -34,10 +34,10 @@
                     >
                 </toolkit:MediaElement>
             </Grid>
-            <Label x:Name="lblInfo2" Grid.Row="0" HorizontalOptions="End" VerticalOptions="End" Margin="0,0,15,77" TextColor="Black" />
+            <Label x:Name="lblInfo2" Grid.Row="0" HorizontalOptions="End" VerticalOptions="End" Margin="0,0,15,25" TextColor="Black" />
             <Button
                 x:Name="btnLoadVideo"
-                Text="Reload Video"
+                Text="Reload Videos"
                 HorizontalOptions="CenterAndExpand"
                 SemanticProperties.Hint="Reload"
                 Clicked="btnLoadVideo_Clicked"/>
